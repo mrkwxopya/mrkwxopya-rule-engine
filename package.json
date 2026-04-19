@@ -1,0 +1,57 @@
+{
+  "name": "mrkwxopya-rule-engine",
+  "version": "0.1.0",
+  "description": "A production-oriented TypeScript rule engine for deterministic evaluation, governance, observability, and extensibility.",
+  "author": "mrkwxopya",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "keywords": [
+    "rule-engine",
+    "typescript",
+    "deterministic",
+    "decision-engine",
+    "rules",
+    "policy-engine",
+    "evaluation",
+    "audit",
+    "middleware",
+    "plugin-system"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
