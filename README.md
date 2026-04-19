@@ -40,7 +40,6 @@ A production-oriented TypeScript rule engine built for deterministic evaluation,
 ```bash
 npm install mrkwxopya-rule-engine
 ```
-````
 
 ---
 
