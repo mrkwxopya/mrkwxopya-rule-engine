@@ -1,4 +1,3 @@
-````md
 # mrkwxopya-rule-engine
 
 A production-oriented TypeScript rule engine built for deterministic evaluation, governance, observability, extensibility, and long-term maintainability.
